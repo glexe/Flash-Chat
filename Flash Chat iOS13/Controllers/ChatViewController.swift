@@ -77,7 +77,6 @@ class ChatViewController: UIViewController {
     }
     
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
-        self.performSegue(withIdentifier: "goToSettings", sender: self)
         let firebaseAuth = Auth.auth()
         do {
           try firebaseAuth.signOut()
@@ -106,15 +105,11 @@ extension ChatViewController: UITableViewDataSource {
             cell.leftImageView.isHidden = true
             cell.rightImageView.isHidden = false
             cell.messageBuble.backgroundColor = UIColor(named: K.BrandColors.lightPurple)
-            cell.label.textColor = UIColor(named: K.BrandColors.purple)
             
         } else {
             cell.leftImageView.isHidden = false
             cell.rightImageView.isHidden = true
             cell.messageBuble.backgroundColor = UIColor(named: K.BrandColors.purple)
-            cell.label.textColor = UIColor(named: K.BrandColors.lightPurple)
-            
-            
         }
        
         return cell
