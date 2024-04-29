@@ -1,0 +1,21 @@
+
+[ {
+  "RequestToSF" : "select Id,CL_Contracted_Date__c,CL_Customer_Number__c,CL_Date_Termination_Requested__c,Name from Account  where Id!=null   and (  CL_Customer_Number__c = 'CUS-038348'   )  ORDER BY Id  "
+}, {
+  "RequestToBP" : [ {
+    "Subsidiary" : "NowInfinity",
+    "fieldsToNull" : [ "contracted_date", "termination_date" ],
+    "customer_number" : "CUS-038348",
+    "salesforce_customer_number" : "CUS-038348",
+    "Name" : "Hamilton Reid",
+    "SfRecordId" : "001OY000003xyizYAA",
+    "SfLastSync" : "2024-04-16T07:26:16.650+0000"
+  } ],
+  "error" : {
+    "created" : "false",
+    "ErrorCode" : "BAD_TRANSACTION_STATUS",
+    "ErrorText" : "This field is required and cannot be left blank.",
+    "ErrorElementField" : "contracted_date",
+    "Id" : null
+  }
+} ]

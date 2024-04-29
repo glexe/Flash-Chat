@@ -1,0 +1,146 @@
+
+[ {
+  "Request to BP metadata" : [ {
+    "FieldName" : "SfRecordId",
+    "FieldLabel" : "Salesforce Record ID",
+    "EntityId" : "14",
+    "ExternalKeyFlag" : "1",
+    "ExternalKey" : "ACCOUNT/SfRecordId",
+    "DataType" : "TEXT",
+    "Status" : "ACTIVE",
+    "DisplayNew" : "0",
+    "DisplayUpdate" : "0",
+    "DisplayView" : "1"
+  }, {
+    "FieldName" : "SfSyncBatchId",
+    "FieldLabel" : "Salesforce Batch ID",
+    "EntityId" : "14",
+    "ExternalKey" : "ACCOUNT/SfSyncBatchId",
+    "DataType" : "TEXT",
+    "Status" : "ACTIVE",
+    "DisplayNew" : "0",
+    "DisplayUpdate" : "0",
+    "DisplayView" : "1"
+  }, {
+    "FieldName" : "SfStatusError",
+    "FieldLabel" : "Salesforce Sync Status",
+    "EntityId" : "14",
+    "ExternalKey" : "ACCOUNT/SfSyncBatchId",
+    "DataLength" : 4000,
+    "DataType" : "TEXT",
+    "Status" : "ACTIVE",
+    "DisplayNew" : "0",
+    "DisplayUpdate" : "0",
+    "DisplayView" : "1"
+  }, {
+    "FieldName" : "SfLastSync",
+    "FieldLabel" : "Salesforce Last Sync",
+    "EntityId" : "14",
+    "ExternalKey" : "ACCOUNT/SfStatusError",
+    "DataType" : "DATE_TIME_SELECTOR",
+    "Status" : "ACTIVE",
+    "DataLength" : 128,
+    "DisplayNew" : "0",
+    "DisplayUpdate" : "0",
+    "DisplayView" : "1"
+  } ]
+}, {
+  "Request to BP metadata" : [ {
+    "FieldName" : "SfRecordId",
+    "FieldLabel" : "Salesforce Record ID",
+    "EntityId" : "14",
+    "ExternalKeyFlag" : "1",
+    "ExternalKey" : "ACCOUNT/SfRecordId",
+    "DataType" : "TEXT",
+    "Status" : "ACTIVE",
+    "DisplayNew" : "0",
+    "DisplayUpdate" : "0",
+    "DisplayView" : "1"
+  }, {
+    "FieldName" : "SfSyncBatchId",
+    "FieldLabel" : "Salesforce Batch ID",
+    "EntityId" : "14",
+    "ExternalKey" : "ACCOUNT/SfSyncBatchId",
+    "DataType" : "TEXT",
+    "Status" : "ACTIVE",
+    "DisplayNew" : "0",
+    "DisplayUpdate" : "0",
+    "DisplayView" : "1"
+  }, {
+    "FieldName" : "SfStatusError",
+    "FieldLabel" : "Salesforce Sync Status",
+    "EntityId" : "14",
+    "ExternalKey" : "ACCOUNT/SfSyncBatchId",
+    "DataLength" : 4000,
+    "DataType" : "TEXT",
+    "Status" : "ACTIVE",
+    "DisplayNew" : "0",
+    "DisplayUpdate" : "0",
+    "DisplayView" : "1"
+  }, {
+    "FieldName" : "SfLastSync",
+    "FieldLabel" : "Salesforce Last Sync",
+    "EntityId" : "14",
+    "ExternalKey" : "ACCOUNT/SfStatusError",
+    "DataType" : "DATE_TIME_SELECTOR",
+    "Status" : "ACTIVE",
+    "DataLength" : 128,
+    "DisplayNew" : "0",
+    "DisplayUpdate" : "0",
+    "DisplayView" : "1"
+  } ],
+  "Response from BP metadata" : [ {
+    "ErrorCode" : "0",
+    "ErrorText" : " ",
+    "ErrorElementField" : " ",
+    "Id" : "52540"
+  }, {
+    "ErrorCode" : "0",
+    "ErrorText" : " ",
+    "ErrorElementField" : " ",
+    "Id" : "52541"
+  }, {
+    "ErrorCode" : "0",
+    "ErrorText" : " ",
+    "ErrorElementField" : " ",
+    "Id" : "52542"
+  }, {
+    "ErrorCode" : "0",
+    "ErrorText" : " ",
+    "ErrorElementField" : " ",
+    "Id" : "52543"
+  } ]
+}, {
+  "RequestToSF" : "select Id,CL_Billing_Email__c,Account.Name,Account.CL_Customer_Number__c,CL_Billing_Name__c from Opportunity  where Id!=null   and (  Name = 'PVT Test Contract Generation 2'   )  ORDER BY Id  "
+}, {
+  "RequestToBP" : [ {
+    "Billing_Profile__AccountIdObj" : {
+      "Email" : null,
+      "BillTo" : "PVT Test Pty Ltd"
+    },
+    "Subsidiary" : "NowInfinity",
+    "Name" : "PVT Test Contract Generation",
+    "customer_number" : "CUS-038155",
+    "SfRecordId" : "0069o000003iXUJAA2",
+    "SfLastSync" : "2024-04-11T06:42:12.882+0000"
+  } ],
+  "error" : {
+    "created" : "false",
+    "ErrorCode" : "BAD_TRANSACTION_STATUS",
+    "ErrorText" : "This field is required and cannot be left blank.",
+    "ErrorElementField" : "contracted_date",
+    "Id" : null
+  }
+}, {
+  "RequestResultsToSF" : {
+    "Id" : "0069o000003iXUJAA2",
+    "BpRecordId__c" : "",
+    "BpStatusError__c" : "ERROR: BAD_TRANSACTION_STATUS",
+    "BpLastSync__c" : "2024-04-11T06:42:13.024+0000",
+    "BpSyncBatchId__c" : "5",
+    "attributes" : {
+      "type" : "Opportunity"
+    }
+  },
+  "error" : "[{\"statusCode\":\"INVALID_FIELD\",\"message\":\"No such column 'BpRecordId__c' on sobject of type Opportunity\",\"fields\":[]}]"
+} ]
